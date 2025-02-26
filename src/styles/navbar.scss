@@ -1,0 +1,41 @@
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    // padding: 0 2rem;
+    align-items: center;
+    top: 0;
+    height: 3rem;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-bottom: 1px solid #cecece;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+
+        .i {
+            transform: rotate(180deg) translateY(-4px);
+        }
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 3rem;
+        
+        li {
+            font-size: .9rem;
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}
