@@ -55,6 +55,9 @@ main {
   color: #000;
   height: auto;
   margin-top: 4rem;
-
+  
 }
 
+main nav {
+z-index: 99999;
+}
