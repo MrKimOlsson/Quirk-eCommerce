@@ -15,10 +15,8 @@ export const Navbar: React.FC = () => {
   return (
     <nav>
     {/* <div> */}
-        <div className='logo'>
-            <a href="/">
-                <h1>Qu</h1><h1 className='i'>i</h1><h1>rk</h1>
-            </a>
+         <div className='logo'>
+            <h1>Q<span>u</span></h1><h1 className='i'>i</h1><h1 className='under-line'>rk</h1>
         </div>
       {/* </div> */}
       <ul>

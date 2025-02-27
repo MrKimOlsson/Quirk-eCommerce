@@ -1,9 +1,8 @@
 nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    // padding: 0 2rem;
     align-items: center;
     top: 0;
     height: 3rem;
@@ -13,16 +12,24 @@ nav {
     border-bottom: 1px solid #cecece;
     z-index: 9999;
 
+
     .logo {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        // background-color: aqua;
         position: absolute;
-        // left: 50%;
-        // right: 50%;
         width: 100vw;
         z-index: 1;
+        margin-bottom: 5px;
+
+        .i {
+            transform: rotate(180deg) translateY(-4px);
+            border-bottom: 4px solid #000;
+        }
+
+        .under-line {
+            border-bottom: 4px solid #000;
+        }
         
         a {
             cursor: pointer;
@@ -30,10 +37,6 @@ nav {
             flex-direction: row;
             text-decoration: none;
             color: #000;
-        }
-
-        .i {
-            transform: rotate(180deg) translateY(-4px);
         }
     }
 
