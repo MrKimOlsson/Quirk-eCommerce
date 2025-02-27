@@ -1,54 +1,69 @@
+import { useState } from 'react';
 import '../styles/navbar.scss';
+import '../styles/slideinCart.scss';
+import SlideinCart from './SlideinCart';
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
+  const [cartOpen, setCartOpen] = useState<boolean>(false);
+
+  const handleCartToggle = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent default link behavior
+    console.log("toggle cart");
+    setCartOpen(!cartOpen);
+  };
+
   return (
     <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    FB
-                </a>
-            </li>
-
-            <li>
-                <a href="/products">
-                    IN
-                </a>
-            </li>
-            <li>
-                <a href="/cart">
-                    TW
-                </a>
-            </li>
-            <li>
-                <a href="/cart">
-                    LI
-                </a>
-            </li>
-        </ul>
-        <div>
-            <div className='logo'>
+    {/* <div> */}
+        <div className='logo'>
+            <a href="/">
                 <h1>Qu</h1><h1 className='i'>i</h1><h1>rk</h1>
-            </div>
+            </a>
         </div>
-        <ul>
-            <li>
-                <a href="/">
-                    Produkter
-                </a>
-            </li>
+      {/* </div> */}
+      <ul>
+        <li>
+          <a href="/">
+            FB
+          </a>
+        </li>
 
-            <li>
-                <a href="/products">
-                   Mina sidor
-                </a>
-            </li>
-            <li>
-                <a href="/cart">
-                    Kundvagn
-                </a>
-            </li>
-        </ul>
+        <li>
+          <a href="/products">
+            IN
+          </a>
+        </li>
+        <li>
+          <a href="/cart">
+            TW
+          </a>
+        </li>
+        <li>
+          <a href="/cart">
+            LI
+          </a>
+        </li>
+      </ul>
+    
+      <ul>
+        <li>
+          <a href="/">
+            Produkter
+          </a>
+        </li>
+
+        <li>
+          <a href="/profile">
+             Mina sidor
+          </a>
+        </li>
+        <li>
+          <a href="/" onClick={handleCartToggle}>
+            Kundvagn
+          </a>
+        </li>
+      </ul>
+      <SlideinCart isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </nav>
-  )
+  );
 }

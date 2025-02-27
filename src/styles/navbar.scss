@@ -1,7 +1,8 @@
 nav {
     position: absolute;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    justify-content: space-between;
     // padding: 0 2rem;
     align-items: center;
     top: 0;
@@ -10,10 +11,26 @@ nav {
     background-color: rgb(255, 255, 255);
     color: #000000;
     border-bottom: 1px solid #cecece;
+    z-index: 9999;
 
     .logo {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        // background-color: aqua;
+        position: absolute;
+        // left: 50%;
+        // right: 50%;
+        width: 100vw;
+        z-index: 1;
+        
+        a {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            color: #000;
+        }
 
         .i {
             transform: rotate(180deg) translateY(-4px);
@@ -28,7 +45,10 @@ nav {
         display: flex;
         flex-direction: row;
         list-style: none;
-        gap: 3rem;
+        padding: 0 2rem 0 2rem;
+        gap: 1rem;
+        z-index: 2;
+
         
         li {
             font-size: .9rem;
